@@ -1,0 +1,28 @@
+<div class="col-md-8 offset-md-3">
+    <h3>Customer information</h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group mt-2">
+            <label>name : </label>
+            <input type="text" class="form-control" id="name"
+            [(ngModel)] = "customer.name" name="name" required>
+        </div>
+    
+        <div class="form-group mt-2">
+            <label>email : </label>
+            <input type="text" class="form-control" id="email"
+            [(ngModel)] = "customer.email" name="email" required>
+        </div>
+    
+        <div class="form-group mt-2">
+            <label>phone : </label>
+            <input type="text" class="form-control" id="phone"
+            [(ngModel)] = "customer.phone" name="phone" required>
+        </div>
+    
+        <button class="btn btn-success mt-3" type="submit">Submit</button>
+    
+    </form>
+    </div>
+
+

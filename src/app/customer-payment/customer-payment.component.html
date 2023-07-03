@@ -1,0 +1,45 @@
+<h2>Stadium Payment</h2>
+<div class="container">
+    <form id="paymentForm">
+        <label for="cardNumberInput">Card Number:</label>
+        <input type="text" id="cardNumberInput" name="cardNumber" required>
+
+        <label for="cardHolderInput">Card Holder Name:</label>
+        <input type="text" id="cardHolderInput" name="cardHolder" required>
+
+        <label for="expiryMonthInput">Expiry Month:</label>
+        <input type="text" id="expiryMonthInput" name="expiryMonth" required>
+
+        <label for="expiryYearInput">Expiry Year:</label>
+        <input type="text" id="expiryYearInput" name="expiryYear" required>
+
+        <label for="cvvInput">CVV:</label>
+        <input type="text" id="cvvInput" name="cvv" required>
+
+        <button type="submit">Make Payment</button>
+    </form>
+</div>
+    <script>
+        // Function to handle form submission
+        function submitPayment(event) {
+            event.preventDefault();
+
+            // Retrieve form values
+            const form = document.getElementById('paymentForm');
+            const cardNumber = form.cardNumber.value;
+            const cardHolder = form.cardHolder.value;
+            const expiryMonth = form.expiryMonth.value;
+            const expiryYear = form.expiryYear.value;
+            const cvv = form.cvv.value;
+
+            // Perform further processing, e.g., sending the payment data to the server
+            // ...
+            // Example: Display a success message
+            alert('Payment successful!');
+            form.reset();
+        }
+
+        // Attach the submit event listener to the form
+        const paymentForm = document.getElementById('paymentForm');
+        paymentForm.addEventListener('submit', submitPayment);
+    </script>
