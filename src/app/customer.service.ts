@@ -11,7 +11,7 @@ export class CustomerService {
     throw new Error('Method not implemented.');
   }
 
-private baseURL = "http://localhost:8081/api/v1/customer/cust";
+private baseURL = "http://localhost:8080/api/v1/customer/cust";
   constructor(private httpClient  : HttpClient) { }
 
   getCustomersList(): Observable<Customer[]>{
